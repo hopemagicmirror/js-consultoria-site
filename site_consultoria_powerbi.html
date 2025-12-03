@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Joice dos Santos — Consultoria</title>
+  <style>
+    :root {
+      --bg: #f7f7f7;
+      --text: #0d1b2a;
+      --card: white;
+      --accent: #2563eb;
+    }
+    [data-theme="dark"] {
+      --bg: #0d1b2a;
+      --text: #e5e7eb;
+      --card: #1b263b;
+      --accent: #61dafb;
+    }
+    body { font-family: Arial, sans-serif; margin: 0; background: var(--bg); color: var(--text); transition: .3s; }
+    header { background: #0d1b2a; color: white; padding: 80px 20px; text-align: center; }
+    nav { background: #1b263b; padding: 12px 0; text-align: center; position: sticky; top: 0; z-index: 1000; }
+    nav a { color: white; margin: 0 15px; text-decoration: none; font-weight: bold; transition: .3s; }
+    nav a:hover { color: #61dafb; }
+    .toggle { position: absolute; top: 15px; right: 15px; background: var(--accent); color: white; border: none; padding: 8px 15px; border-radius: 8px; cursor: pointer; }
+    section { padding: 60px 20px; max-width: 1100px; margin: auto; }
+    .hero { text-align: center; margin-top: 40px; }
+    .hero h1 { font-size: 2.8rem; }
+
+    .services, .portfolio { display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 25px; }
+    .card { background: var(--card); padding: 25px; border-radius: 16px; box-shadow: 0 4px 12px rgba(0,0,0,0.1); transition: .3s; }
+    .card:hover { transform: translateY(-8px); }
+    .cta { background: var(--accent); color: white; padding: 15px 25px; border-radius: 8px; text-decoration: none; font-weight: bold; display: inline-block; margin-top: 25px; }
+
+    form { background: var(--card); padding: 30px; border-radius: 12px; box-shadow: 0 4px 10px rgba(0,0,0,0.1); }
+    form input, form textarea { width: 100%; margin-bottom: 15px; padding: 12px; border-radius: 8px; border: 1px solid #ccc; }
+
+    footer { background: #0d1b2a; color: white; text-align: center; padding: 20px; margin-top: 40px; }
+
+    @media(max-width:600px){
+      .hero h1 { font-size: 2rem; }
+      img.logo { max-width: 350px; animation: breathe 4s ease-in-out infinite; }
+    @keyframes breathe {
+      0% { transform: scale(1); }
+      50% { transform: scale(1.05); }
+      100% { transform: scale(1); }
+    }
+    }
+  </style>
+</head>
+<body>
+
+  <button class="toggle" onclick="toggleTheme()">Tema</button>
+
+  <header>
+    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAABgAAAAQACAIAAACoEwUVAACxU2NhQlgAALFTanVt...EIAAAKoAOJtxA3VybjpjMnBhOjM4NTQyNjRhLTU4ZWItNDU3Yy1hY2MwLTY1OGZi" class="logo" alt="Logo JS Consultoria" />
+    <div class="hero">
+      <h1>Transformando Dados em Decisões Inteligentes</h1>
+      <p>Consultoria em Business Intelligence, Automação e Engenharia</p>
+      <a href="#contato" class="cta">Quero um orçamento</a>
+    </div>
+  </header>
+
+  <nav>
+    <a href="#servicos">Serviços</a>
+    <a href="#portfolio">Portfólio</a>
+    <a href="#sobre">Sobre</a>
+    <a href="#contato">Contato</a>
+  </nav>
+
+  <section id="landing">
+    <h2>Por que contratar minha consultoria?</h2>
+    <div class="services">
+      <div class="card"><h3>Resultados Rápidos</h3><p>Dashboards e automações entregues em poucos dias.</p></div>
+      <div class="card"><h3>Automação Completa</h3><p>Redução de até 90% do trabalho manual.</p></div>
+      <div class="card"><h3>Dados Confiáveis</h3><p>Modelagem profissional e integrações seguras.</p></div>
+    </div>
+  </section>
+
+  <section id="servicos">
+    <h2>Serviços Disponíveis</h2>
+    <div class="services">
+      <div class="card"><h3>Power BI</h3><p>Dashboards, DAX, modelagem, ETL e integrações.</p></div>
+      <div class="card"><h3>Automação</h3><p>Power Automate, Python, APIs e workflows inteligentes.</p></div>
+      <div class="card"><h3>IoT Industrial</h3><p>Coleta em tempo real, CLPs e supervisórios.</p></div>
+      <div class="card"><h3>Consultoria Estratégica</h3><p>Apoio completo para transformar dados em ação.</p></div>
+    </div>
+  </section>
+
+  <section id="portfolio">
+    <h2>Portfólio</h2>
+    <div class="portfolio">
+      <div class="card"><h3>Dashboard Financeiro</h3><p>KPIs, análises preditivas e relatórios automatizados.</p></div>
+      <div class="card"><h3>Monitoramento Industrial</h3><p>Dados de sensores e máquinas em tempo real.</p></div>
+      <div class="card"><h3>Automação de Relatórios</h3><p>Envio automático 100% livre de trabalho manual.</p></div>
+    </div>
+  </section>
+
+  <section id="sobre">
+    <h2>Sobre</h2>
+    <p>Sou Joice dos Santos, Engenheira de Computação especializada em Business Intelligence, automação, IoT e análise de dados. Minha missão é oferecer soluções que gerem eficiência, economia e clareza na tomada de decisão.</p>
+  </section>
+
+  <section id="contato">
+    <h2>Contato</h2>
+    <form>
+      <input type="text" placeholder="Seu nome" required />
+      <input type="email" placeholder="Seu e-mail" required />
+      <textarea rows="5" placeholder="Descreva sua necessidade"></textarea>
+      <button class="cta" type="submit">Enviar</button>
+    </form>
+  </section>
+
+  <footer>
+    © 2025 Joice dos Santos — Consultoria em Dados e Automação
+  </footer>
+
+<script>
+function toggleTheme(){
+  const current = document.body.getAttribute('data-theme');
+  document.body.setAttribute('data-theme', current === 'dark' ? 'light' : 'dark');
+}
+</script>
+
+</body>
+</html>
